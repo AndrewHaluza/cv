@@ -248,7 +248,7 @@ export const RESUME_DATA = {
         "Junior Full Stack Developer → Middle Full Stack Developer → Lead Full Stack Developer",
       logo: ThinkMobilesLogo,
       start: "2017",
-      end: "2019",
+      end: "2021",
       description: (
         <>
           Developed web applications for outsource clients and internal products
