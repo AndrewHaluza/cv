@@ -23,7 +23,7 @@ export const RESUME_DATA = {
       skills.
     </>
   ),
-  avatarUrl: "",
+  avatarUrl: undefined,
   personalWebsiteUrl: "https://andrewhaluza.github.io/cv/",
   contact: {
     email: "andyhaluza+cv@gmail.com",
@@ -91,7 +91,7 @@ export const RESUME_DATA = {
             </li>
             <li>Conducted PR reviews</li>
             <li>Participated in interviews</li>
-            <li>Integrated third-party services:</li>
+            <li>Integrated third-party services: Supertokens, Lansweeper</li>
           </ul>
         </>
       ),
