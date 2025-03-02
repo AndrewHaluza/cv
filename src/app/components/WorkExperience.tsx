@@ -3,6 +3,7 @@ import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { RESUME_DATA } from "@/data/resume-data";
 import { cn } from "@/lib/utils";
+import Image, { StaticImageData } from "next/image";
 
 type WorkExperience = (typeof RESUME_DATA)["work"][number];
 type WorkBadges = readonly string[];
@@ -60,20 +61,30 @@ function WorkPeriod({ start, end }: WorkPeriodProps) {
 interface CompanyLinkProps {
   company: WorkExperience["company"];
   link: WorkExperience["link"];
+  logo?: StaticImageData;
 }
 
 /**
  * Renders company name with optional link
  */
-function CompanyLink({ company, link }: CompanyLinkProps) {
+function CompanyLink({ company, link, logo }: CompanyLinkProps) {
   return (
     <a
-      className="hover:underline"
+      className="hover:underline inline-flex items-center gap-1"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`${company} company website`}
     >
+      {!!logo && (
+        <Image
+          src={logo}
+          alt={`company ${company} logo`}
+          width={16}
+          height={16}
+          // className="rounded-full"
+        />
+      )}
       {company}
     </a>
   );
@@ -88,14 +99,14 @@ interface WorkExperienceItemProps {
  * Handles responsive layout for badges (mobile/desktop)
  */
 function WorkExperienceItem({ work }: WorkExperienceItemProps) {
-  const { company, link, badges, title, start, end, description } = work;
+  const { company, link, badges, title, start, end, description, logo } = work;
 
   return (
     <Card className="py-1 print:py-0">
       <CardHeader className="print:space-y-1">
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
-            <CompanyLink company={company} link={link} />
+            <CompanyLink company={company} link={link} logo={logo} />
             <BadgeList
               className="hidden gap-x-1 sm:inline-flex"
               badges={badges}
@@ -110,7 +121,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
       </CardHeader>
 
       <CardContent>
-        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
+        <div className="mt-2 text-pretty text-xs text-foreground/80 print:mt-1 print:text-[10px]">
           {description}
         </div>
         <div className="mt-2">
@@ -138,7 +149,11 @@ export function WorkExperience({ work }: WorkExperienceProps) {
       <h2 className="text-xl font-bold" id="work-experience">
         Work Experience
       </h2>
-      <div className="space-y-4 print:space-y-0" role="feed" aria-labelledby="work-experience">
+      <div
+        className="space-y-4 print:space-y-0"
+        role="feed"
+        aria-labelledby="work-experience"
+      >
         {work.map((item) => (
           <article key={`${item.company}-${item.start}`} role="article">
             <WorkExperienceItem work={item} />

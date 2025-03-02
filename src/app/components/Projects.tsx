@@ -1,3 +1,4 @@
+import Image, { StaticImageData } from "next/image";
 import { Badge } from "../../components/ui/badge";
 import {
   Card,
@@ -14,14 +15,29 @@ type ProjectTags = readonly string[];
 interface ProjectLinkProps {
   title: string;
   link?: string;
+  logo?: StaticImageData;
 }
 
 /**
  * Renders project title with optional link and status indicator
  */
-function ProjectLink({ title, link }: ProjectLinkProps) {
+function ProjectLink({ title, link, logo }: ProjectLinkProps) {
+  const logoComponent = !!logo && (
+    <Image
+      src={logo}
+      alt={title}
+      width={16}
+      height={16}
+    />
+  );
+
   if (!link) {
-    return <span>{title}</span>;
+    return (
+      <span>
+        {logoComponent}
+        {title}
+      </span>
+    );
   }
 
   return (
@@ -33,6 +49,7 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
         className="inline-flex items-center gap-1 hover:underline"
         aria-label={`${title} project (opens in new tab)`}
       >
+        {logoComponent}
         {title}
         <span
           className="size-1 rounded-full bg-green-500"
@@ -83,12 +100,19 @@ interface ProjectCardProps {
   description: string;
   tags: ProjectTags;
   link?: string;
+  logo?: StaticImageData;
 }
 
 /**
  * Card component displaying project information
  */
-function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
+function ProjectCard({
+  title,
+  description,
+  tags,
+  link,
+  logo,
+}: ProjectCardProps) {
   return (
     <Card
       className="flex h-full flex-col overflow-hidden border p-3"
@@ -97,7 +121,7 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
       <CardHeader>
         <div className="space-y-1">
           <CardTitle className="text-base">
-            <ProjectLink title={title} link={link} />
+            <ProjectLink title={title} link={link} logo={logo} />
           </CardTitle>
           <CardDescription
             className="text-pretty font-mono text-xs print:text-[10px]"
@@ -142,6 +166,7 @@ export function Projects({ projects }: ProjectsProps) {
               description={project.description}
               tags={project.techStack}
               link={"link" in project ? project.link.href : undefined}
+              logo={project.logo}
             />
           </article>
         ))}
