@@ -91,6 +91,45 @@ function ContactButtons({ contact, personalWebsiteUrl }: ContactButtonsProps) {
   );
 }
 
+interface AvailabilityProps {
+  availability: typeof RESUME_DATA.availability;
+}
+
+function Availability({ availability }: AvailabilityProps) {
+  return (
+    <div
+      className="flex flex-col gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+      role="list"
+      aria-label="Availability"
+    >
+      <span className="flex-item">Availability: {availability}</span>
+    </div>
+  );
+}
+
+interface LanguagesListProps {
+  languages: typeof RESUME_DATA.languages;
+}
+
+function LanguagesList({ languages }: LanguagesListProps) {
+  return (
+    <div
+      className="flex flex-col gap-x-1 pt-1 font-mono text-sm text-foreground/80 print:hidden"
+      role="list"
+      aria-label="Languages list"
+    >
+      <span>Languages:</span>
+      <ul className="list-disc list-inside">
+        {languages.map((language) => (
+        <li key={language.name}>
+        {language.name}: {language.level}
+        </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 interface PrintContactProps {
   contact: typeof RESUME_DATA.contact;
   personalWebsiteUrl?: string;
@@ -167,6 +206,12 @@ export function Header() {
           contact={RESUME_DATA.contact}
           personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
         />
+      </div>
+
+      <div className="flex-2">
+        <Availability availability={RESUME_DATA.availability} />
+
+        <LanguagesList languages={RESUME_DATA.languages} />
       </div>
 
       {RESUME_DATA.avatarUrl && (

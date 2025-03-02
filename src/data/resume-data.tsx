@@ -12,6 +12,16 @@ export const RESUME_DATA = {
   initials: "AH",
   location: "Sczcecin, Poland, CET",
   availability: "1 month",
+  languages: [
+    {
+      name: "English",
+      level: "B1-B2",
+    },
+    {
+      name: "Ukrainian",
+      level: "Native",
+    },
+  ],
   locationLink: "https://www.google.com/maps/place/Sczcecin",
   about:
     "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
