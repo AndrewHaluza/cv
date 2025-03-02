@@ -1,240 +1,380 @@
 import {
-  ClevertechLogo,
-  ConsultlyLogo,
-  JojoMobileLogo,
-  MonitoLogo,
-  NSNLogo,
-  ParabolLogo,
+  CodifireLogo,
+  NewerestLogo,
+  SharpmindsLogo,
+  ThinkMobilesLogo,
+  UaFundsLogo,
 } from "@/images/logos";
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  name: "Andrii Haluza",
+  initials: "AH",
+  location: "Sczcecin, Poland, CET",
+  availability: "1 month",
+  locationLink: "https://www.google.com/maps/place/Sczcecin",
   about:
     "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
   summary: (
     <>
-      Frontend-focused Full Stack Engineer specializing in high-performance
-      React applications, scalable Node.js services, and real-time collaboration
-      systems. Experienced in technical architecture design and remote team
-      leadership.
+      Backend-focused Full Stack Engineer specializing in high-performance Web
+      applications, scalable Node.js services, and real-time collaboration
+      systems. Experienced in technical architecture design and problem solving
+      skills.
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  avatarUrl: "",
+  personalWebsiteUrl: "https://andrewhaluza.github.io/cv/",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "andyhaluza+cv@gmail.com",
+    tel: "",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/andrewhaluza",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/andriy-haluza/",
         icon: LinkedInIcon,
-      },
-      {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Uzhhorod National University",
+      degree: "Master's Degree in Control and Cybernetics",
+      start: "2011",
+      end: "2017",
     },
   ],
   work: [
     {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
-      logo: ConsultlyLogo,
+      company: "NDA",
+      badges: [
+        // "Remote",
+        // "Node.js",
+        "Express.js",
+        // "TypeScript",
+        "React",
+        "ArangoDB,",
+        "SocketIO",
+        "Docker",
+        "Supertokens",
+      ],
+      link: undefined,
+      title: "Senior Full Stack Developer",
       start: "2024",
       end: null,
       description: (
         <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
+          Senior Full Stack Developer for a security dashboard platform.
           <ul className="list-inside list-disc">
             <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
+              Developed new features and fixed bugs in the existing codebase for
+              both backend and frontend
             </li>
             <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
+              Refactored legacy code to improve performance and maintainability
             </li>
             <li>
-              Implementing system-wide monitoring and security improvements
+              Contributed to the creation and maintenance of technical
+              documentation
             </li>
+            <li>
+              Implemented and integrated from scratch Bastion service for
+              authentication to the internal network powered by Supertokens
+            </li>
+            <li>
+              Contributed to CI/CD to simplify work processes for deployment
+            </li>
+            <li>Conducted PR reviews</li>
+            <li>Participated in interviews</li>
+            <li>Integrated third-party services:</li>
           </ul>
         </>
       ),
     },
     {
-      company: "Parabol",
-      link: "https://parabol.co",
+      company: "SharpMinds",
+      link: "https://sharpminds.com/",
       badges: [
-        "Remote",
-        "React",
-        "TypeScript",
-        "Node.js",
-        "GraphQL",
-        "Tailwind CSS",
+        // "Remote",
+        // "Node.js",
+        "NextJs",
+        "MongoDB",
+        "SocketIO",
+        "Elasticsearch",
+        // "Docker",
+        "AWS",
+        // "AWS (s3, Beanstalk, SSM)",
+        "Payments",
+        // "Stripe",
+        // "Google Pub/Sub",
+        // "Google/Apple market purchases and subscriptions",
       ],
-      title: "Senior Full Stack Developer",
-      logo: ParabolLogo,
+      title: "Senior Backend Developer",
+      logo: SharpmindsLogo,
       start: "2021",
       end: "2024",
       description: (
         <>
-          Senior developer and squad leader for an enterprise agile meeting
-          platform.
+          Senior backend developer for an dating mobile application.
           <ul className="list-inside list-disc">
+            <li>Fully rewritten the backend after MVP stage</li>
             <li>
-              Built design system with Tailwind CSS, improving development speed
-              and time to market
+              Optimized queries and indexes in MongoDB for faster response times
             </li>
             <li>
-              Implemented engineering practices: PR automation, code review
-              guidelines, and workflows
+              Implemented matching algorithm for users based on their
+              preferences
             </li>
             <li>
-              Open source contributions to Relay DevTools and React i18n tooling
+              Improved application performance by addressing code and database
+              bottlenecks
+            </li>
+            <li>
+              Utilized caching mechanisms like Redis for faster response times
+            </li>
+            <li>
+              Deployed and maintained the application on AWS, ensuring high
+              availability and scalability
+            </li>
+            <li>
+              Monitored application performance and resolved production issues
+              promptly
+            </li>
+            <li>
+              Integrated payment services for Stipe, Google/Apple PlayMarket
+              purchases and subscriptions
+            </li>
+            <li>
+              Integrated third-party services: Google (Pub/Sub, Places,
+              Analytics) APIs, Veriff, Sendgrid, Mailchimp, Firebase
             </li>
           </ul>
         </>
       ),
     },
     {
-      company: "Clevertech",
-      link: "https://clevertech.biz",
-      badges: ["Remote", "React", "TypeScript", "Node.js", "Android", "Kotlin"],
-      title: "Lead Android Developer → Full Stack Developer",
-      logo: ClevertechLogo,
-      start: "2015",
-      end: "2021",
+      company: "Codifire",
+      link: "https://www.codifire.com/",
+      badges: [
+        // "Remote",
+        "Node.js",
+        // "Express.js",
+        // "Koa.js",
+        "Strapi",
+        // "React",
+        "NextJs",
+        // "TypeScript",
+        "MariaDB",
+        "Meilisearch",
+        // "Cronicle",
+        "Payments",
+        // "Auth0",
+        // "Socket.io",
+        // "Jest",
+        // "Sentry",
+        // "Stripe",
+        // "services architecture",
+      ],
+      title: "Senior Full Stack Developer",
+      logo: CodifireLogo,
+      start: "2022",
+      end: "2023",
       description: (
         <>
-          Successfully transitioned from mobile to full-stack development while
-          leading distributed teams.
+          Senior Full Stack Developer for customizable marketplace. Focused on
+          the backend.
           <ul className="list-inside list-disc">
             <li>
-              Led frontend team at Evercast, building real-time platform
-              supporting 30+ users per room with HD streaming and collaboration
-              tools
+              Implemented new features and fixed bugs in the existing codebase
+              for both backend and frontend
             </li>
             <li>
-              Developed offline-first Android app for DKMS, improving donor
-              registration process
+              Utilized and customized Strapi as a core for some service,
+              developed custom plugins
             </li>
             <li>
-              Led development teams across multiple successful client projects
+              Implemented from scratch service for synchronization data between
+              SQL database and Google Spreadsheets and Drive in both direction
+              utilizing customizable schemas and spreadsheet which triggers
+              create/update/delete actions in the system
             </li>
+            <li>
+              Implemented email template system for customizing email templates
+              for different types of emails via CMS
+            </li>
+            <li>Optimized database queries for efficient data handling</li>
+            <li>Integrated third party services: Stripe, Sentry, Auth0</li>
           </ul>
         </>
       ),
     },
     {
-      company: "Jojo Mobile",
-      link: "https://bsgroup.eu/",
-      badges: ["On Site", "Android", "Java", "Kotlin"],
-      title: "Android Developer → Lead Android Developer",
-      logo: JojoMobileLogo,
-      start: "2012",
-      end: "2015",
+      company: "ThinkMobiles",
+      link: "https://thinkmobiles.com/",
+      badges: [
+        // "On Site",
+        "MERN",
+        "MEVN",
+        // "Node.js",
+        // "Express.js",
+        // "React",
+        // "TypeScript",
+        // "MongoDB",
+        // "Socket.io",
+        "PortgreSQL",
+        "EJS",
+        // "Vue.js",
+        "Cloudflare",
+        "Nginx",
+        "GCP",
+      ],
+      title:
+        "Junior Full Stack Developer → Middle Full Stack Developer → Lead Full Stack Developer",
+      logo: ThinkMobilesLogo,
+      start: "2017",
+      end: "2019",
       description: (
         <>
-          First Android developer, grew and led a team of 15+ engineers while
-          establishing engineering culture.
+          Developed web applications for outsource clients and internal products
+          in various domains including Marketing and Advertising, CRM\ERP
+          Systems, Entertainment, Health and Wellness
+          <p>
+            On a last few years I was responsible for developing internal
+            products focused on SEO, page speed rendering and marketing.
+          </p>
           <ul className="list-inside list-disc">
             <li>
-              Developed apps for major Polish companies including LOT, Polskie
-              Radio, and Agora
+              Last year I was responsible for leading a team of 4-5 junior
+              developers. Providing guidance, support, and knowledge sharing to
+              help team members develop their skills and meet project goals,
+              ensuring the quality and consistency of the codebase by reviewing
+              and providing feedback on team members&apos; code contributions.
             </li>
-            <li>Built and mentored high-performing mobile development team</li>
+            <li>
+              Fully developing server-side rendering applications mixed with EJS
+              templating for performance and Vue.js for functionality
+            </li>
+            <li>
+              Tested and implemented various SEO strategies closely with CEO to
+              increase organic traffic and Google indexing
+            </li>
+          </ul>
+          <p>Previously was involved in these projects:</p>
+          <ul className="list-inside list-disc">
+            <li>Backend Developer for a video streaming web application</li>
+            <li>Full Stack Developer for lead generation platform</li>
+            <li>
+              Backend Developer for a mobile application for tracking safe
+              driving without cellphones
+            </li>
+            <li>Full Stack Developer for an ERP system</li>
           </ul>
         </>
       ),
-    },
-    {
-      company: "Nokia Siemens Networks",
-      link: "https://www.nokia.com",
-      badges: ["On Site", "C/C++", "LTE", "Agile"],
-      title: "C/C++ Developer",
-      logo: NSNLogo,
-      start: "2010",
-      end: "2012",
-      description:
-        "Developed software for LTE base stations at enterprise scale, gaining strong fundamentals in software architecture, testing practices, and cross-team collaboration.",
     },
   ],
   skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
+    // Languages
+    "JavaScript, 8y",
+    "TypeScript, 5y",
+
+    // Backend
+    "Node.js, 8y",
+    "Express.js, 8y",
+    "Nest.js, 3y",
+    "Koa.js, 2y",
+    "Strapi, 2y",
+
+    // Frontend
+    "React, 4y",
+    "Vue.js, 2y",
+    "EJS templating, 3y",
+    "NextJs, 1y",
+    "Nuxt, 1y",
+
+    // Testing
+    "Jest, 2y",
+
+    // Databases
+    "MongoDB, 5y",
+    "PostgreSQL, 3y",
+    "MariaDB/MySQL, 2y",
+    "Mongoose, 5y",
+    "Sequelize, 3y",
+    "Redis, 4y",
+    "ArangoDB, 1y",
+
+    // Search
+    "Elasticsearch, 3y",
+    "Meilisearch, 2y",
+    // Version Control, CI/CD, infrastructure
+    "Git, 8y",
+    "GitHub Actions, 3y",
+    "Docker, 4y",
+    "Nginx, 2y",
+
+    // Cloud
+    "AWS, 3y",
+    "GCP, 2y",
+    "Google Pub/Sub, 2y",
+
+    // Real-time
+    "SocketIO, 3y",
+
+    // Payments
+    "Stripe, 3y",
+    "PlayMarket purchases & subscriptions, 2y",
+    "AppleStore purchases & subscriptions, 2y",
+
+    // Other
+    "Cronicle",
+    "Auth0",
+    "Supertokens",
+    "Sentry",
+    "Cloudflare",
+    "SEO",
+    "Services architecture",
   ],
   projects: [
     {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
-      description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
-      logo: MonitoLogo,
-      link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "Consultly",
+      title: "Uafunds",
       techStack: [
         "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
+        "Strapi",
+        "sqlite",
+        "Nuxt",
+        "Cloudflare",
+        "GCP",
       ],
       description:
-        "Platform for online consultations with real-time video meetings and scheduling",
-      logo: ConsultlyLogo,
+        "Transparent platform for aggregating small funds to collect finances for their needs. The goal is to help small funds to collect money for their needs.",
+      logo: UaFundsLogo,
       link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
+        label: "uafunds.org",
+        href: "https://uafunds.org/",
       },
     },
     {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
+      title: "Newerest",
+      techStack: [
+        "TypeScript",
+        "Strapi",
+        "PostgreSQL",
+        "Nuxt",
+        "Cloudflare",
+        "GCP",
+      ],
       description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
-      logo: MonitoLogo,
+        "Blog platform for sharing news and articles for various topics. The goal is to test SEO strategies.",
+      logo: NewerestLogo,
       link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
+        label: "newerest.space",
+        href: "https://newerest.space/",
       },
     },
   ],
