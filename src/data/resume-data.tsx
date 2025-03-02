@@ -74,6 +74,7 @@ export const RESUME_DATA = {
         "Supertokens",
       ],
       link: undefined,
+      logo: undefined,
       title: "Senior Full Stack Developer",
       start: "2024",
       end: null,
