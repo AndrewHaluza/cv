@@ -291,56 +291,56 @@ export const RESUME_DATA = {
   ],
   skills: [
     // Languages
-    "JavaScript, 8y",
-    "TypeScript, 5y",
+    "JavaScript|8y",
+    "TypeScript|5y",
 
     // Backend
-    "Node.js, 8y",
-    "Express.js, 8y",
-    "Nest.js, 3y",
-    "Koa.js, 2y",
-    "Strapi, 2y",
+    "Node.js|8y",
+    "Express.js|8y",
+    "Nest.js|3y",
+    "Koa.js|2y",
+    "Strapi|2y",
 
     // Frontend
-    "React, 4y",
-    "Vue.js, 2y",
-    "EJS templating, 3y",
-    "NextJs, 1y",
-    "Nuxt, 1y",
+    "React|4y",
+    "Vue.js|2y",
+    "EJS templating|3y",
+    "NextJs|1y",
+    "Nuxt|1y",
 
     // Testing
-    "Jest, 2y",
+    "Jest|2y",
 
     // Databases
-    "MongoDB, 5y",
-    "PostgreSQL, 3y",
-    "MariaDB/MySQL, 2y",
-    "Mongoose, 5y",
-    "Sequelize, 3y",
-    "Redis, 4y",
-    "ArangoDB, 1y",
+    "MongoDB|5y",
+    "PostgreSQL|3y",
+    "MariaDB/MySQL|2y",
+    "Mongoose|5y",
+    "Sequelize|3y",
+    "Redis|4y",
+    "ArangoDB|1y",
 
     // Search
-    "Elasticsearch, 3y",
-    "Meilisearch, 2y",
+    "Elasticsearch|3y",
+    "Meilisearch|2y",
     // Version Control, CI/CD, infrastructure
-    "Git, 8y",
-    "GitHub Actions, 3y",
-    "Docker, 4y",
-    "Nginx, 2y",
+    "Git|8y",
+    "GitHub Actions|3y",
+    "Docker|4y",
+    "Nginx|2y",
 
     // Cloud
-    "AWS, 3y",
-    "GCP, 2y",
-    "Google Pub/Sub, 2y",
+    "AWS|3y",
+    "GCP|2y",
+    "Google Pub/Sub|2y",
 
     // Real-time
-    "SocketIO, 3y",
+    "SocketIO|3y",
 
     // Payments
     "Stripe, 3y",
-    "PlayMarket purchases & subscriptions, 2y",
-    "AppleStore purchases & subscriptions, 2y",
+    "PlayMarket purchases & subscriptions|2y",
+    "AppleStore purchases & subscriptions|2y",
 
     // Other
     "Cronicle",
@@ -349,7 +349,8 @@ export const RESUME_DATA = {
     "Sentry",
     "Cloudflare",
     "SEO",
-    "Services architecture",
+    "Monolithic Architecture",
+    "SOA",
   ],
   projects: [
     {
