@@ -68,7 +68,7 @@ export const RESUME_DATA = {
         "Express.js",
         // "TypeScript",
         "React",
-        "ArangoDB,",
+        "ArangoDB",
         "SocketIO",
         "Docker",
         "Supertokens",
