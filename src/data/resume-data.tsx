@@ -61,7 +61,7 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "NDA",
+      company: "DeviceTotal",
       badges: [
         // "Remote",
         // "Node.js",
